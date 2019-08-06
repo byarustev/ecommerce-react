@@ -13,7 +13,6 @@ const fetchDepartments=()=>dispatch=>{
         dispatch(action(DEPARTMENTS_SUCCESS,response.data));
     }).catch((error)=>{
         dispatch(action(DEPARTMENTS_LOADING,false));
-        console.log(error);
         dispatch(action(DEPARTMENTS_FETCH_ERROR,error.response));
     })
 };
