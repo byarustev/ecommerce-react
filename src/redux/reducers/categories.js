@@ -1,8 +1,10 @@
-import { 
+import types from '../types/types';
+const { categories } = types;
+const {
+    CATEGORIES_SUCCESS,
     CATEGORIES_LOADING, 
-    CATEGORIES_SUCCESS, 
-    CATEGORIES_FETCH_ERROR 
-} from "../types/categories";
+    CATEGORIES_FETCH_ERROR
+} = categories;
 
 const initialState={
     categories:[],

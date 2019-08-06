@@ -1,30 +1,30 @@
 import types from '../types/types';
-const { departments } = types;
+const { products } = types;
 const {
-    DEPARTMENTS_SUCCESS, 
-    DEPARTMENTS_LOADING, 
-    DEPARTMENTS_FETCH_ERROR 
-} = departments;
+    PRODUCTS_FETCH_ERROR,
+    PRODUCTS_SUCCESS,
+    PRODUCTS_LOADING
+} = products;
 
 const initialState={
-    departments:[],
+    products:[],
     isLoading:false,
     error:''
 }
 
-const departmentsReducer=(state=initialState,action)=>{
+const productsReducer=(state=initialState,action)=>{
     switch(action.type){
-        case DEPARTMENTS_SUCCESS:
+        case PRODUCTS_SUCCESS:
             return {
                 ...state,
-                departments: action.payload
+                products: action.payload
             };
-        case DEPARTMENTS_LOADING:
+        case PRODUCTS_LOADING:
             return {
                 ...state,
                 isLoading: action.payload
             };
-        case DEPARTMENTS_FETCH_ERROR:
+        case PRODUCTS_FETCH_ERROR:
             return {
                 ...state,
             error: action.payload
@@ -35,4 +35,4 @@ const departmentsReducer=(state=initialState,action)=>{
     }
 }
 
-export default departmentsReducer;
+export default productsReducer;

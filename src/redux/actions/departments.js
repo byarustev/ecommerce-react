@@ -1,10 +1,12 @@
 import action from './action';
 import axiosInstance from '../axiosSetup';
-import {
-    DEPARTMENTS_FETCH_ERROR, 
+import types from '../types/types';
+const { departments } = types;
+const {
+    DEPARTMENTS_SUCCESS, 
     DEPARTMENTS_LOADING, 
-    DEPARTMENTS_SUCCESS
-} from '../types/departments';
+    DEPARTMENTS_FETCH_ERROR 
+} = departments;
 
 const fetchDepartments=()=>dispatch=>{
         dispatch(action(DEPARTMENTS_LOADING,true));

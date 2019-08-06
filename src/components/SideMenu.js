@@ -2,6 +2,7 @@ import React from 'react';
 import {ListGroup} from 'react-bootstrap';
 import fetchCategories from '../redux/actions/categories';
 import {connect} from 'react-redux';
+import {Col} from 'react-bootstrap';
 
 class SideMenu extends React.Component{
     
@@ -12,8 +13,8 @@ class SideMenu extends React.Component{
 
     render(){
         const {isLoading, error, categories} = this.props;
-        console.log(categories, 'cats');
         return(
+            <Col md={2}>
             <ListGroup as="ul" className='side-menu'>
                 {
                    error &&  <ListGroup.Item as="li">Opps Error occured</ListGroup.Item>
@@ -28,8 +29,8 @@ class SideMenu extends React.Component{
                         </ListGroup.Item>
                     ))
                 }
-                
             </ListGroup>
+            </Col>
         )
     }
 }
