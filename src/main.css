@@ -13,13 +13,7 @@ code {
 }
 
 .main{
-  display: flex;
-  flex-direction: row;
-  padding: 10px;
-}
-
-.side-menu{
-  width:37%;
+  margin-top:10px;
 }
 
 .right-display{
@@ -34,10 +28,13 @@ code {
   margin-top: 10px;
 }
 
+.card-deck{
+  flex-wrap: wrap;
+}
+
 .navbar{
   background-color: #2f3542 !important;
 }
-
 
 .navbar-light .navbar-brand {
   color:#ff4757;
@@ -49,4 +46,67 @@ code {
 
 .navbar-light .navbar-nav .nav-link:hover {
   color: #ff4757;
+}
+
+.product-card{
+  height: 400px;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+.card-title{
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.dicounted{
+  text-decoration: line-through;
+}
+
+.prices{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.prices span{
+  padding-right: 10px; 
+}
+
+.add-to-cart-sec{
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 5px; 
+  margin-top: 10px;
+  width: 90%;
+  margin-left:0 ;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
+
+.add-to-cart-sec button{
+  margin: 10px auto;
+  /* display: none; */
+}
+
+.product-card:hover .add-to-cart-sec{
+  display: flex;
+}
+
+.card-text{
+  margin-bottom: 5px;
+}
+
+.card-body{
+  padding: 13px;
+}
+
+.card-footer span{
+  align-self: center;
 }
