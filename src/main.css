@@ -49,9 +49,18 @@ code {
 }
 
 .product-card{
-  height: 400px;
-  margin-bottom: 15px;
-  margin-top: 15px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.card{
+  height: 340px;
+  cursor: pointer;
+  border-radius: 0;
+}
+
+.card-img-top {
+  border-radius: 0;
 }
 
 .card-title{
@@ -88,6 +97,7 @@ code {
   align-items: center;
   justify-content: center;
   display: none;
+  cursor: pointer;
 }
 
 .add-to-cart-sec button{
@@ -109,4 +119,8 @@ code {
 
 .card-footer span{
   align-self: center;
+}
+
+.modal-backdrop.show {
+  opacity: .75;
 }

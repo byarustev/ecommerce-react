@@ -4,7 +4,7 @@ require('dotenv').config();
 const API_URL= process.env.REACT_APP_API_URL;
 
 const Product=({title, description, image, id, price, discounted_price})=>(
-    <Col md={4} className="product-card">
+    <Col md={3} className="product-card">
         <Card >
             <Card.Img variant="top" src={`${API_URL}/images/products/${image}`} />
                 <Card.Body>

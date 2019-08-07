@@ -6,7 +6,7 @@ class LandingPage extends React.Component{
 
     render(){
         return(
-            <Col md={9}>
+            <Col md={10}>
                 <Row>
                     <Col>
                         <Carousel>
@@ -51,7 +51,7 @@ class LandingPage extends React.Component{
                 <Row>
                 <ProductsContainer 
                     page={1}
-                    limit={20}
+                    limit={12}
                     description_length={65}
                 />
                 </Row>

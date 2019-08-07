@@ -13,6 +13,16 @@ const PRODUCTS_FETCH_ERROR="PRODUCTS_FETCH_ERROR";
 const PRODUCTS_SUCCESS="PRODUCTS_SUCCESS";
 const PRODUCTS_LOADING="PRODUCTS_LOADING";
 
+//signup action types
+const SIGNUP_ERROR="SIGNUP_ERROR";
+const SIGNUP_SUCCESS="SIGNUP_SUCCESS";
+const SIGNUP_LOADING="SIGNUP_LOADING";
+
+//login action types
+const LOGIN_ERROR="LOGIN_ERROR";
+const LOGIN_SUCCESS="LOGIN_SUCCESS";
+const LOGIN_LOADING="LOGIN_LOADING";
+
 const types={
     categories:{
         CATEGORIES_FETCH_ERROR,
@@ -28,6 +38,16 @@ const types={
         PRODUCTS_FETCH_ERROR,
         PRODUCTS_SUCCESS,
         PRODUCTS_LOADING
+    },
+    signup:{
+        SIGNUP_SUCCESS,
+        SIGNUP_LOADING,
+        SIGNUP_ERROR
+    },
+    login:{
+        LOGIN_ERROR,
+        LOGIN_SUCCESS,
+        LOGIN_LOADING
     }
 };
 
