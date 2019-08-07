@@ -1,8 +1,8 @@
 import React from 'react';
 import fetchProducts from '../redux/actions/products';
 import {connect} from 'react-redux';
-import {Col} from 'react-bootstrap';
 import Product from '../components/product';
+import {Spinner} from 'react-bootstrap';
 
 class ProductsContainer extends React.Component{
 
@@ -12,10 +12,13 @@ class ProductsContainer extends React.Component{
     }
 
     render(){
-        const { products, error, isLoading } = this.props;
+        const { products, isLoading } = this.props;
         
         return (
             <React.Fragment>
+                {isLoading &&
+                    <Spinner animation="grow" />
+                }
                 {products.rows &&
                     products.rows.map((product, index)=>( 
                     <Product 

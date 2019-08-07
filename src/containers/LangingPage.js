@@ -6,7 +6,7 @@ class LandingPage extends React.Component{
 
     render(){
         return(
-            <Col md={9}>
+            <Col md={10}>
                 <Row>
                     <Col>
                         <Carousel>

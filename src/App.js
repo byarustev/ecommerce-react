@@ -4,7 +4,11 @@ import SideMenu from './components/SideMenu';
 import LangingPage from './containers/LangingPage';
 import {Container, Row} from 'react-bootstrap';
 import {Route, Switch, BrowserRouter as Router} from 'react-router-dom';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import './main.css';
+
+toast.configure();
 
 function App() {
   return (

@@ -12,28 +12,34 @@ const {
     LOGIN_LOADING
 } = login;
 
-const initialState={
-    user:{},
-    isLoading:false,
-    error:''
+const loginInitialState={
+    loginSuccess:false,
+    loggingIn:false,
+    loginError:''
 }
 
-export const loginReducer=(state=initialState,action)=>{
+const signupInitialState={
+    signupSucess:false,
+    signingUp:false,
+    signupError:''
+}
+
+export const loginReducer=(state=loginInitialState,action)=>{
     switch(action.type){
         case LOGIN_SUCCESS:
             return {
                 ...state,
-                user: action.payload
+                loginSuccess: true
             };
         case LOGIN_LOADING:
             return {
                 ...state,
-                isLoading: action.payload
+                loggingIn: action.payload
             };
         case LOGIN_ERROR:
             return {
                 ...state,
-            error: action.payload
+                loginError: action.payload
             };
         default:
             return state;                
@@ -41,24 +47,24 @@ export const loginReducer=(state=initialState,action)=>{
 }
 
 
-export const signupReducer=(state=initialState,action)=>{
+export const signupReducer=(state=signupInitialState,action)=>{
     switch(action.type){
         case SIGNUP_SUCCESS:
             return {
                 ...state,
-                user: action.payload
+                signupSucess: true
             };
             
         case SIGNUP_LOADING:
             return {
                 ...state,
-                isLoading: action.payload
+                signingUp: action.payload
             };
 
         case SIGNUP_ERROR:
             return {
                 ...state,
-            error: action.payload
+                signupError: action.payload
             };
         default:
             return state;                
