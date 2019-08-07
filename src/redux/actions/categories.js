@@ -12,7 +12,6 @@ const fetchCategories=(dept)=>dispatch=>{
         dispatch(action(CATEGORIES_LOADING,true));
     axiosInstance.get(`categories/inDepartment/${dept}`).then((response)=>{
         dispatch(action(CATEGORIES_LOADING,false));
-        console.log(response.data);
         dispatch(action(CATEGORIES_SUCCESS,response.data));
     }).catch((error)=>{
         dispatch(action(CATEGORIES_LOADING,false));
